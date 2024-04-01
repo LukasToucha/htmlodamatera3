@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+<style>
+    p {font:calibri}
+    #uvod {position:absolute; width:auto; height:300px; left:175px; background-color:#262729 ; border:4px solid; padding:10px; color:#90cae2;} 
+        a {color:#84db97} 
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+    #menu {position:fixed; width:140px; height:588px; background-color:#141516; border:4px solid; padding:10px; color:#90cae2}
+        a {color:#84db97} 
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+    #obsah {position:absolute; width:1160px; left:175px; padding:10px}
+    #stranky {position:absolute; width:1145px; left:0px; top:100%; height:10px; border:4px solid; padding:10px; color:#90cae2; background-color:#262729}
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+</style>
+</head>
+
+<body>
+    <div id="menu">
+        <h3>Obsah:</h3>
+        <ol>
+            <li><a href="https://lukastoucha.github.io/htmlodamatera1/">Úvod</a></li>
+            <li><a href="https://lukastoucha.github.io/htmlodamatera1/">Úprava textu</a></li>
+            <li><a href="https://lukastoucha.github.io/htmlodamatera2/">Tabulky</a></li>
+            <li><a href="https://lukastoucha.github.io/htmlodamatera2/">Odrážky</a></li>
+            <li><a href="https://lukastoucha.github.io/htmlodamatera2/">Odkazy</a></li>
+            <li>CSS</li>
+            <li><a>Návrh stránky</a></li>
+        </ol> 
+    </div>
+<div id="obsah">
+    <h2>CSS</h2>
+    <p>
+        Pro většinu vzhledových úprav stránky se používá takzvaných kaskádových stylů (CSS). Jejich zápis se trochu liší od HTML. Jsou tři 
+        způsoby jak CSS používat.
+        <ol>
+            <li>Zápis přímo do tagů - &ltp style="font:calibri"&gt</li>
+            <li>Zápis do hlavičky kódu - &lthead&gt &ltstyle&gt p {font:calibry} &lt/style&gt &lt/head&gt</li>
+            <li>Samostatný soubor - Do externího souboru zapíšete specifikace např: p {font:calibri} a do hlavičky vašeho dokumentu vložíte 
+                odkaz &ltlink rel="stylesheet" type="text/css" href="externího souboru"&gt</li>
+        </ol>
+        K tomuto dokumentu budu používat zápis do hlavičky stránky.
+    </p>
+    <h3>Identifikátory</h3>
+    <p>
+    CSS umožňuje užití tzv. identifikátorů. Do hlavičky mezi tag &ltstyle&gt se zapíše název identifikátoru se znakem # na jeho začátku. Za název 
+    uvedete jeho specifikace do těchto {} závorek. Následně můžete uvést tento název do tagu za atribut "id" a tím tento tag získá všechny 
+    uvedené specifikace. 
+    <br>Příklad užití identifikátoru:
+    <img src="identifikátor.png" align="top">
+    </p>
+    <h3>Specifikace tagů</h3>
+    <p>
+        Podobně lze nadefinovat tagy a dokonce i tagy použité uvnitř tagu. Například mohu určit vlastnosti všech tagů &ltp&gt a zároveň i 
+        vlastnosti všech tagů &lth1&gt užitých uvnitř tagu &ltp&gt. Jeden soubor vlastností může patřit více tagům. Stačí je zapsat za sebe a 
+        vložit mezi ně čárky.
+        <br>Řekněme tedy, že chci, aby všecny odstavce byly zarovnané do bloku a nadpisy měly zelenou barvu.
+        <br>Zápis těchto podmínek: <img src="CSSspecifikace.png" align="top">
+    </p>
+    <h3>Pozicování</h3>
+    <p>
+        Pozicování je způsob, jak určit polohu jakéhokoliv prvku na stránce. Relativním pozicováním uržíte posunutí objektu vůči jeho běžné 
+        poloze. Absolutním pozicováním připnete objekt na pevnou pozici na stránce. Pozici na svislé ose stanovíte jako hodnotu třeba top:10px. 
+        Kladné hodnoty posouvají směrem dolů, záporné zase nahoru. Na vodorovné ose left:10px. Kladné hodnoty posouvají vlevo, záporné vpravo. 
+        Hodnotu můžete zapsat třeba v pixelech, procentech nebo centimetrech. S tím také souvisí atributy "width" a "height" pro šířku a výšku. 
+        Pro příklad můžu vytvořit postraní lištu na pravém boku stránky.
+    </p>
+    <p>&ltdiv style="position:relative; width:200px; height:200px;left:82%; top:-60px;border:4px solid"&gt &l/div&gt</p>
+    <div style="position:relative; width:200px; height:200px;left:82%; top:-60px;border:4px solid">
+        Tento prostor se často využívá pro odkazy nebo reklamy, ale můžete si sem dát cokoli.
+    </div>
+    <p>
+        Kaskádové styly nabízí pestrou škálu vzhledových úprav. Nemá smysl je tu všechny jmenovat, ale vložím 
+        <a href="https://www.jakpsatweb.cz/css/css-vlastnosti-hodnoty-prehled.html">zde</a> odkaz na jejich přehled.
+    </p>
+    <div id="stranky" align="middle">
+        <a href="https://lukastoucha.github.io/htmlodamatera2/">&lt</a> <a href="https://lukastoucha.github.io/htmlodamatera1/">1</a>, <a href="https://lukastoucha.github.io/htmlodamatera2/">2</a>, 3, <a>4</a> <a>&gt</a>
+    </div>
+</div>
+
+</body>
